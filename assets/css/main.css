@@ -2599,7 +2599,7 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 2.5rem 0;
+			margin: 0rem 0;
 			width: 100%;
 		}
 
