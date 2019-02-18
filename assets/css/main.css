@@ -3554,14 +3554,7 @@ input, select, textarea {
 				color: #18bfef !important;
 			}
 
-		@media screen and (max-width: 980px) {
-
-			#header {
-				height: 14rem;
-				padding-bottom: 4rem;
-			}
-
-		}
+	
 
 		@media screen and (max-width: 736px) {
 
