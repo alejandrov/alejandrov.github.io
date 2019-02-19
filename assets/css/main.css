@@ -3283,7 +3283,7 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
+		min-height: 92vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -3443,7 +3443,7 @@ input, select, textarea {
 
 			#intro {
 				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+				min-height: 35vh;
 			}
 
 				#intro h1 {
