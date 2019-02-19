@@ -3488,8 +3488,8 @@ input, select, textarea {
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		height: 6.7rem;
-		padding-bottom: 1rem;
+		height: 14rem;
+		padding-bottom: 5rem;
 		position: relative;
 		text-align: center;
 		z-index: 2;
@@ -3897,7 +3897,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#main > * {
-				padding: 2rem 2rem 0.1rem 2rem ;
+				padding: 2rem 2rem 1rem 2rem ;
 			}
 
 		}
