@@ -3185,3 +3185,7 @@ input, select, textarea {
 			}
 
 	}
+	.swiper-container {
+    width: 100%;
+    height: 300px;
+}
