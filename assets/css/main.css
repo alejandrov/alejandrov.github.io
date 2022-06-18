@@ -1619,7 +1619,7 @@ button,
     display: flex;
     margin: 0 0 3em 3em;
     position: relative;
-    width: calc(50% - 3em); }
+    width: calc(32% - 3em); }
     .features article:nth-child(2n - 1) {
       margin-right: 1.5em; }
     .features article:nth-child(2n) {
@@ -1679,7 +1679,7 @@ button,
       width: 100%; }
       .features article {
         margin: 0 0 3em 0;
-        width: 100%; }
+        width: 50%; }
         .features article:nth-child(2n - 1) {
           margin-right: 0; }
         .features article:nth-child(2n) {
