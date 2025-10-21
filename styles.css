@@ -269,6 +269,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     position: relative;
+    left: -20px;
     animation: float 6s ease-in-out infinite;
     display: flex;
     align-items: center;
