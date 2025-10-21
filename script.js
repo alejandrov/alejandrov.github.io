@@ -317,14 +317,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         const heroTitle = document.querySelector('.hero-title');
         if (heroTitle) {
-            heroTitle.style.opacity = '0';
-            heroTitle.style.transform = 'translateY(20px)';
-            heroTitle.style.transition = 'all 0.8s ease';
-            
-            setTimeout(() => {
-                heroTitle.style.opacity = '1';
-                heroTitle.style.transform = 'translateY(0)';
-            }, 500);
+            heroTitle.style.opacity = '1';
+            heroTitle.style.transform = 'translateY(0)';
         }
     }, 500);
 

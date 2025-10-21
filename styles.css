@@ -224,6 +224,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
 }
 
 .highlight {
@@ -255,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-image {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
 }
@@ -267,6 +270,11 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     position: relative;
     animation: float 6s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 7rem;
 }
 
 .hero-circle::before {
@@ -314,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -346,16 +354,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-.img-placeholder {
+.about-img-container img {
     width: 100%;
     height: 300px;
-    background: linear-gradient(135deg, var(--bg-secondary), var(--border-color));
+    object-fit: cover;
     border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color: var(--text-light);
 }
 
 /* Projects Section */
