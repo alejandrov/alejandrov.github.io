@@ -166,6 +166,14 @@ document.addEventListener('DOMContentLoaded', function() {
             transition-delay: 0.4s;
         }
 
+        .project-card:nth-child(5).animate-in {
+            transition-delay: 0.5s;
+        }
+
+        .project-card:nth-child(6).animate-in {
+            transition-delay: 0.6s;
+        }
+
         .skill-item {
             transition: all 0.3s ease;
         }
@@ -260,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const colors = {
             success: '#10b981',
             error: '#ef4444',
-            info: '#3b82f6'
+            info: '#336699'
         };
         notification.style.backgroundColor = colors[type] || colors.info;
 
@@ -305,30 +313,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 
-    // Typing effect for hero title
-    function typeWriter(element, text, speed = 100) {
-        let i = 0;
-        element.innerHTML = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        
-        type();
-    }
-
-    // Initialize typing effect after a short delay
+    // Simple fade-in effect for hero title (removed typewriter to avoid HTML issues)
     setTimeout(() => {
         const heroTitle = document.querySelector('.hero-title');
         if (heroTitle) {
-            const originalText = heroTitle.innerHTML;
-            typeWriter(heroTitle, originalText, 50);
+            heroTitle.style.opacity = '0';
+            heroTitle.style.transform = 'translateY(20px)';
+            heroTitle.style.transition = 'all 0.8s ease';
+            
+            setTimeout(() => {
+                heroTitle.style.opacity = '1';
+                heroTitle.style.transform = 'translateY(0)';
+            }, 500);
         }
-    }, 1000);
+    }, 500);
 
     // Parallax effect for hero section
     window.addEventListener('scroll', function() {
@@ -383,13 +381,13 @@ document.addEventListener('DOMContentLoaded', function() {
             left: '0',
             width: '100%',
             height: '100%',
-            background: 'linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%)',
+            background: 'linear-gradient(135deg, #f8fafc 0%, #e6f0f7 100%)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             zIndex: '9999',
-            color: '#2563eb',
+            color: '#336699',
             fontSize: '1.2rem',
             fontWeight: '500'
         });
@@ -399,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function() {
             width: '50px',
             height: '50px',
             border: '4px solid #e2e8f0',
-            borderTop: '4px solid #2563eb',
+            borderTop: '4px solid #336699',
             borderRadius: '50%',
             animation: 'spin 1s linear infinite',
             marginBottom: '1rem'

@@ -1,7 +1,7 @@
 /* Reset y Variables CSS */
 :root {
-    --primary-color: #2563eb;
-    --primary-dark: #1d4ed8;
+    --primary-color: #336699;
+    --primary-dark: #2a5280;
     --secondary-color: #64748b;
     --accent-color: #f59e0b;
     --text-primary: #1e293b;
@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, #e0f2fe 100%);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, #e6f0f7 100%);
     position: relative;
     overflow: hidden;
 }
