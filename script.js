@@ -202,11 +202,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(this);
             const name = formData.get('name');
             const email = formData.get('email');
-            const subject = formData.get('subject');
             const message = formData.get('message');
             
             // Simple form validation
-            if (!name || !email || !subject || !message) {
+            if (!name || !email || !message) {
                 showNotification('Por favor, completa todos los campos.', 'error');
                 return;
             }
@@ -216,9 +215,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulate form submission
-            showNotification('¡Mensaje enviado correctamente! Te contactaré pronto.', 'success');
-            this.reset();
+            // Submit to Formspree via AJAX
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showNotification('¡Mensaje enviado correctamente! Te contactaré pronto.', 'success');
+                    this.reset();
+                } else {
+                    showNotification('Error al enviar el mensaje. Inténtalo de nuevo.', 'error');
+                }
+            })
+            .catch(error => {
+                showNotification('Error de conexión. Verifica tu internet e intenta de nuevo.', 'error');
+            });
         });
     }
 
@@ -313,14 +328,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 
-    // Simple fade-in effect for hero title (removed typewriter to avoid HTML issues)
+    // Simple fade-in effect for hero title and immediate visibility on mobile
     setTimeout(() => {
         const heroTitle = document.querySelector('.hero-title');
+        const heroContent = document.querySelector('.hero-content');
+        const heroImage = document.querySelector('.hero-image');
+        
         if (heroTitle) {
             heroTitle.style.opacity = '1';
             heroTitle.style.transform = 'translateY(0)';
         }
-    }, 500);
+        
+        // Ensure hero content is visible immediately on mobile
+        if (window.innerWidth <= 768) {
+            if (heroContent) {
+                heroContent.style.opacity = '1';
+                heroContent.style.transform = 'translateY(0)';
+            }
+            if (heroImage) {
+                heroImage.style.opacity = '1';
+                heroImage.style.transform = 'translateY(0)';
+            }
+        }
+    }, 300);
 
     // Parallax effect for hero section
     window.addEventListener('scroll', function() {
