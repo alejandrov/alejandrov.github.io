@@ -68,7 +68,6 @@ Para personalizar este sitio web:
 ## Contacto
 
 📧 **Email**: alejandro.villarroel@email.com
-🌐 **LinkedIn**: [linkedin.com/in/alejandrovillarroel](https://linkedin.com/in/alejandrovillarroel)
 💻 **GitHub**: [github.com/alejandrov](https://github.com/alejandrov)
 
 ---

@@ -430,6 +430,12 @@ h1, h2, h3, h4, h5, h6 {
     background-position: center;
 }
 
+.project-card:nth-child(7) .project-image {
+    background-image: url(assets/aguacatin.png);
+    background-size: cover;
+    background-position: center;
+}
+
 .project-overlay {
     position: absolute;
     top: 0;
