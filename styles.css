@@ -521,45 +521,59 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 4px solid #336699;
 }
 
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
 .project-card:nth-child(1) .project-image {
     background-image: url(assets/palanteganado.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .project-card:nth-child(2) .project-image {
     background-image: url(assets/ventanilla.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .project-card:nth-child(3) .project-image {
     background-image: url(assets/matias.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .project-card:nth-child(4) .project-image {
     background-image: url(assets/garnersystem.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .project-card:nth-child(5) .project-image {
     background-image: url(assets/tesseractsm.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .project-card:nth-child(6) .project-image {
     background-image: url(assets/tecnicolas.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .project-card:nth-child(7) .project-image {
     background-image: url(assets/aguacatin.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
