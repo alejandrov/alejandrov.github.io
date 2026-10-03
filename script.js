@@ -1,523 +1,373 @@
-// Smooth scrolling and navigation functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // Navigation elements
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const header = document.querySelector('.header');
-
-    // Mobile navigation toggle
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking on a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        });
-    });
-
-    // Header background on scroll
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = 'none';
-        }
-    });
-
-    // Active navigation link highlighting
-    const sections = document.querySelectorAll('section[id]');
-    
-    function highlightNavigation() {
-        const scrollPosition = window.scrollY + 100;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                if (navLink) {
-                    navLink.classList.add('active');
-                }
-            }
-        });
+'use strict';
+// Project content preserved from the original portfolio.
+const projects = [
+    {
+        "title": "Aqua Vivant",
+        "description": "Plataforma inmobiliaria para explorar propiedades, gestionar solicitudes de contacto y centralizar la experiencia comercial con automatización, CRM y asistencia basada en IA.",
+        "impact": "Impacto: acelera la captación de leads y ordena el seguimiento comercial.",
+        "image": "assets/aqua-vivant-card.jpg",
+        "url": "https://ia.aquavivant.com/",
+        "tech": [
+            "React",
+            "Material UI",
+            "CRM",
+            "IA"
+        ]
+    },
+    {
+        "title": "Palante Ganado",
+        "description": "Plataforma integral para la administración digital de ganado en ranchos. Permite el seguimiento en tiempo real del inventario, registro de movimientos y generación de reportes detallados para optimizar la gestión ganadera.",
+        "impact": "Impacto: convierte inventario, movimientos y reportes en una operación trazable.",
+        "image": "assets/palanteganado-card.jpg",
+        "url": "https://palanteganado.com/",
+        "tech": [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Stripe"
+        ]
+    },
+    {
+        "title": "Ventanilla Digital",
+        "description": "Plataforma innovadora para la creación y gestión de trámites gubernamentales en línea. Facilita el acceso a servicios públicos, reduce tiempos de espera y mejora la eficiencia en procesos administrativos.",
+        "impact": "Impacto: reduce fricción ciudadana y digitaliza procesos de atención pública.",
+        "image": "assets/ventanilla-card.jpg",
+        "url": "http://cancun-digital.mx/",
+        "tech": [
+            "Vue.js",
+            "Express",
+            "PostgreSQL"
+        ]
+    },
+    {
+        "title": "Ventanilla Digital Monterrey",
+        "description": "Nueva versión de la plataforma para gestión digital de trámites municipales, con automatización, seguimiento de solicitudes y herramientas de atención ciudadana impulsadas por IA.",
+        "impact": "Impacto: moderniza trámites municipales con asistencia inteligente y autoservicio.",
+        "image": "assets/ventanilla-monterrey-card.jpg",
+        "url": "https://ventanilladigital.monterrey.gob.mx/",
+        "tech": [
+            "React",
+            "IA",
+            "Gobierno Digital",
+            "Automatización"
+        ]
+    },
+    {
+        "title": "Sistema MatIAs",
+        "description": "Bot inteligente para WhatsApp con integración de Gemini para respuestas automáticas, procesamiento de lenguaje natural y automatización de procesos de negocio.",
+        "impact": "Impacto: atiende conversaciones frecuentes sin depender siempre de un operador.",
+        "image": "assets/matias-card.jpg",
+        "url": "http://matias.gobierno-digital.mx/",
+        "tech": [
+            "Node.js",
+            "Gemini API",
+            "WhatsApp API",
+            "Socket.io",
+            "MongoDB"
+        ]
+    },
+    {
+        "title": "Garner System 3.0",
+        "description": "Nueva versión del sistema para planificación, priorización y entrega de resultados con IA. Integra seguimiento operativo, tableros de control y flujos de trabajo para gobiernos municipales.",
+        "impact": "Impacto: da visibilidad ejecutiva a prioridades, avances y operación diaria.",
+        "image": "assets/garner-ia-card.jpg",
+        "url": "https://monterrey.garner-ia.com/",
+        "tech": [
+            "React",
+            "IA",
+            "Dashboards",
+            "Gobierno Digital"
+        ]
+    },
+    {
+        "title": "Agentecitas",
+        "description": "Agente conversacional para WhatsApp que automatiza la atención, agenda citas, gestiona servicios y centraliza el seguimiento operativo de negocios con asistencia inteligente.",
+        "impact": "Impacto: agenda y responde clientes 24/7 sin saturar al equipo humano.",
+        "image": "assets/agentecitas-card.jpg",
+        "url": "https://agentecitas.up.railway.app/",
+        "tech": [
+            "React",
+            "WhatsApp",
+            "IA",
+            "CRM"
+        ]
+    },
+    {
+        "title": "Aguacatin",
+        "description": "Plataforma innovadora para conectar distribuidores de pañales, permitiendo comparar precios y ofertas en tiempo real. Facilita la distribución eficiente y el acceso a mejores oportunidades de negocio.",
+        "impact": "Impacto: facilita comparación de ofertas y mejora decisiones de compra.",
+        "image": "assets/aguacatin-card.jpg",
+        "url": "https://aguacatin.com/",
+        "tech": [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Express"
+        ]
     }
-
-    window.addEventListener('scroll', highlightNavigation);
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerHeight = header.offsetHeight;
-                const targetPosition = target.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Animated counters for stats
-    function animateCounters() {
-        const counters = document.querySelectorAll('.stat-number');
-        
-        counters.forEach(counter => {
-            const target = parseInt(counter.textContent);
-            const increment = target / 50;
-            let current = 0;
-            
-            const updateCounter = () => {
-                if (current < target) {
-                    current += increment;
-                    counter.textContent = Math.ceil(current) + '+';
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target + '+';
-                }
-            };
-            
-            updateCounter();
-        });
+];
+(() => {
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let motionPaused = reducedMotion.matches;
+    let toastTimer;
+    function toast(message) {
+        const element = $('.toast');
+        clearTimeout(toastTimer);
+        element.textContent = message;
+        element.hidden = false;
+        toastTimer = setTimeout(() => { element.hidden = true; }, 4000);
     }
+    function syncMotion() {
+        document.documentElement.classList.toggle('motion-paused', motionPaused);
+    }
+    syncMotion();
+    reducedMotion.addEventListener('change', event => { motionPaused = event.matches; syncMotion(); });
+    $('#year').textContent = new Date().getFullYear();
 
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+    // Navigation and section progress.
+    const menu = $('.nav-menu');
+    const menuToggle = $('.menu-toggle');
+    const setMenu = (open) => {
+        menu.classList.toggle('open', open);
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
     };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                
-                // Trigger counter animation for stats section
-                if (entry.target.classList.contains('about-stats')) {
-                    animateCounters();
-                }
-            }
-        });
-    }, observerOptions);
-
-    // Elements to observe for animations
-    const animatedElements = document.querySelectorAll(`
-        .hero-content,
-        .hero-image,
-        .about-content,
-        .about-stats,
-        .service-card,
-        .project-card,
-        .skills-category,
-        .timeline-item,
-        .contact-content
-    `);
-
-    animatedElements.forEach(el => {
-        observer.observe(el);
-    });
-
-    // Add CSS classes for animations
-    const style = document.createElement('style');
-    style.textContent = `
-        .hero-content,
-        .hero-image,
-        .about-content,
-        .about-stats,
-        .service-card,
-        .project-card,
-        .skills-category,
-        .timeline-item,
-        .contact-content {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .animate-in {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-
-        .project-card.animate-in {
-            transition-delay: 0.1s;
-        }
-
-        .project-card:nth-child(2).animate-in {
-            transition-delay: 0.2s;
-        }
-
-        .project-card:nth-child(3).animate-in {
-            transition-delay: 0.3s;
-        }
-
-        .project-card:nth-child(4).animate-in {
-            transition-delay: 0.4s;
-        }
-
-        .project-card:nth-child(5).animate-in {
-            transition-delay: 0.5s;
-        }
-
-        .project-card:nth-child(6).animate-in {
-            transition-delay: 0.6s;
-        }
-
-        .skill-item {
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-5px) scale(1.05);
-        }
-
-        .timeline-content {
-            transition: all 0.3s ease;
-        }
-
-        .timeline-item:hover .timeline-content {
-            transform: scale(1.02);
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Form handling
-    const contactForm = document.querySelector('.form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            
-            // Simple form validation
-            if (!name || !email || !message) {
-                showNotification('Por favor, completa todos los campos.', 'error');
-                return;
-            }
-            
-            if (!isValidEmail(email)) {
-                showNotification('Por favor, ingresa un email válido.', 'error');
-                return;
-            }
-            
-            // Submit to Formspree via AJAX
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    showNotification('¡Mensaje enviado correctamente! Te contactaré pronto.', 'success');
-                    this.reset();
-                } else {
-                    showNotification('Error al enviar el mensaje. Inténtalo de nuevo.', 'error');
-                }
-            })
-            .catch(error => {
-                showNotification('Error de conexión. Verifica tu internet e intenta de nuevo.', 'error');
-            });
-        });
+    menuToggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+    $$('a[href^="#"]').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('click', event => { if (!event.target.closest('.nav')) setMenu(false); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+    window.matchMedia('(min-width: 851px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
+    let scrollTick = false;
+    function updateScroll() {
+        const max = document.documentElement.scrollHeight - innerHeight;
+        document.documentElement.style.setProperty('--progress', `${max > 0 ? (scrollY / max) * 100 : 0}%`);
+        const section = $$('main section[id]').filter(item => item.getBoundingClientRect().top < 180).pop();
+        $$('.nav-menu a').forEach(link => link.classList.toggle('active', !!section && link.hash === `#${section.id}`));
+        scrollTick = false;
     }
+    window.addEventListener('scroll', () => { if (!scrollTick) { scrollTick = true; requestAnimationFrame(updateScroll); } }, { passive: true });
+    updateScroll();
 
-    // Email validation function
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    // Notification system
-    function showNotification(message, type = 'info') {
-        // Remove existing notifications
-        const existingNotification = document.querySelector('.notification');
-        if (existingNotification) {
-            existingNotification.remove();
-        }
-
-        // Create notification element
-        const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.innerHTML = `
-            <span class="notification-message">${message}</span>
-            <button class="notification-close">&times;</button>
-        `;
-
-        // Add notification styles
-        Object.assign(notification.style, {
-            position: 'fixed',
-            top: '20px',
-            right: '20px',
-            padding: '1rem 1.5rem',
-            borderRadius: '0.5rem',
-            color: 'white',
-            fontWeight: '500',
-            zIndex: '9999',
-            maxWidth: '400px',
-            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
-            transform: 'translateX(100%)',
-            transition: 'transform 0.3s ease',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '1rem'
+    // Filtering keeps every project accessible in the HTML without JavaScript.
+    const cards = $$('.project-card');
+    $$('.filters button').forEach(button => button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        $$('.filters button').forEach(item => {
+            const active = item === button;
+            item.classList.toggle('active', active);
+            item.setAttribute('aria-pressed', String(active));
         });
-
-        // Set background color based on type
-        const colors = {
-            success: '#10b981',
-            error: '#ef4444',
-            info: '#336699'
-        };
-        notification.style.backgroundColor = colors[type] || colors.info;
-
-        // Add to DOM
-        document.body.appendChild(notification);
-
-        // Animate in
-        setTimeout(() => {
-            notification.style.transform = 'translateX(0)';
-        }, 100);
-
-        // Close button functionality
-        const closeBtn = notification.querySelector('.notification-close');
-        closeBtn.style.cssText = `
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0;
-            margin-left: 1rem;
-        `;
-        
-        closeBtn.addEventListener('click', () => {
-            removeNotification(notification);
+        let count = 0;
+        cards.forEach(card => {
+            card.hidden = filter !== 'all' && !card.dataset.category.split(' ').includes(filter);
+            if (!card.hidden) count++;
         });
+        $('.project-count').textContent = `MOSTRANDO ${String(count).padStart(2, '0')} / 08`;
+        updateScroll();
+    }));
 
-        // Auto remove after 5 seconds
-        setTimeout(() => {
-            if (document.body.contains(notification)) {
-                removeNotification(notification);
-            }
-        }, 5000);
+    // Native dialogs provide focus trapping, Escape and focus restoration.
+    const projectDialog = $('#project-dialog');
+    const escapeHTML = value => value.replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+    function openProject(index) {
+        const project = projects[index];
+        if (!project) return;
+        $('#project-dialog-body').innerHTML = `<img src="${project.image}" alt="Vista de ${escapeHTML(project.title)}" width="900" height="500"><div class="dialog-content"><h2 id="project-dialog-title">${escapeHTML(project.title)}</h2><p>${escapeHTML(project.description)}</p><p class="dialog-impact">${escapeHTML(project.impact)}</p><div class="project-tech">${project.tech.map(tech => `<span>${escapeHTML(tech)}</span>`).join('')}</div><a class="btn btn-primary" href="${project.url}" target="_blank" rel="noopener noreferrer">Explorar el sitio</a></div>`;
+        projectDialog.showModal();
     }
-
-    function removeNotification(notification) {
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            if (document.body.contains(notification)) {
-                notification.remove();
-            }
-        }, 300);
-    }
-
-    // Simple fade-in effect for hero title and immediate visibility on mobile
-    setTimeout(() => {
-        const heroTitle = document.querySelector('.hero-title');
-        const heroContent = document.querySelector('.hero-content');
-        const heroImage = document.querySelector('.hero-image');
-        
-        if (heroTitle) {
-            heroTitle.style.opacity = '1';
-            heroTitle.style.transform = 'translateY(0)';
-        }
-        
-        // Ensure hero content is visible immediately on mobile
-        if (window.innerWidth <= 768) {
-            if (heroContent) {
-                heroContent.style.opacity = '1';
-                heroContent.style.transform = 'translateY(0)';
-            }
-            if (heroImage) {
-                heroImage.style.opacity = '1';
-                heroImage.style.transform = 'translateY(0)';
-            }
-        }
-    }, 300);
-
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const heroCircle = document.querySelector('.hero-circle');
-        
-        if (heroCircle && scrolled < window.innerHeight) {
-            heroCircle.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
-
-    // Skills hover effect with random delays
-    const skillItems = document.querySelectorAll('.skill-item');
-    skillItems.forEach((item, index) => {
-        item.style.animationDelay = `${index * 0.1}s`;
-        
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.05)';
-            this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1)';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-            this.style.boxShadow = 'none';
+    $$('[data-open-project]').forEach(button => button.addEventListener('click', () => openProject(Number(button.dataset.openProject))));
+    $$('dialog').forEach(dialog => {
+        $('.dialog-close', dialog).addEventListener('click', () => dialog.close());
+        dialog.addEventListener('click', event => {
+            if (event.target !== dialog) return;
+            const box = dialog.getBoundingClientRect();
+            if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
         });
     });
 
-    // Project cards hover effects
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
+    // A searchable command palette: Ctrl/Command K, arrows, Enter, Escape.
+    const commandDialog = $('#command-dialog');
+    const commandInput = $('#command-search');
+    const commands = [
+        { title: 'Inicio', type: 'SECCIÓN', target: '#home' },
+        { title: 'Proceso de desarrollo · de tu idea a un sistema', type: 'SECCIÓN', target: '#process' },
+        { title: 'Proyectos profesionales', type: 'SECCIÓN', target: '#projects' },
+        { title: 'Sobre Alejandro', type: 'SECCIÓN', target: '#about' },
+        { title: 'Servicios · desarrollo y consultoría', type: 'SECCIÓN', target: '#services' },
+        { title: 'Laboratorio de agentes IA', type: 'LAB', target: '#lab' },
+        { title: 'Stack técnico · tecnologías', type: 'SECCIÓN', target: '#skills' },
+        { title: 'Experiencia profesional', type: 'SECCIÓN', target: '#experience' },
+        { title: 'Contacto · iniciar un proyecto', type: 'SECCIÓN', target: '#contact' },
+        ...projects.map((project, index) => ({ title: project.title, type: 'PROYECTO', index, keywords: project.tech.join(' ') + ' ' + project.description })),
+        ...$$('[data-service]').map(item => ({ title: item.dataset.service, type: 'SERVICIO', target: '#contact', service: item.dataset.service }))
+    ];
+    let selectedResult = 0;
+    let filteredCommands = commands;
+    const normalize = value => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    function renderCommands() {
+        const query = normalize(commandInput.value.trim());
+        filteredCommands = commands.filter(item => normalize(`${item.title} ${item.keywords || ''}`).includes(query));
+        selectedResult = 0;
+        const results = $('#command-results');
+        results.replaceChildren();
+        if (!filteredCommands.length) {
+            const empty = document.createElement('p');
+            empty.className = 'command-empty';
+            empty.textContent = 'No hay coincidencias. Prueba con “IA”, “React” o “contacto”.';
+            results.append(empty);
+        }
+        filteredCommands.forEach((command, index) => {
+            const button = document.createElement('button');
+            button.className = 'command-result' + (index === 0 ? ' selected' : '');
+            button.innerHTML = `<small>${command.type}</small><span>${escapeHTML(command.title)}</span>`;
+            button.addEventListener('click', () => executeCommand(command));
+            results.append(button);
         });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
+    }
+    function executeCommand(command) {
+        if (!command) return;
+        commandDialog.close();
+        if (typeof command.index === 'number') openProject(command.index);
+        else {
+            if (command.service) prefillService(command.service);
+            $(command.target).scrollIntoView({ behavior: motionPaused ? 'instant' : 'smooth' });
+        }
+    }
+    function openCommands() {
+        if (commandDialog.open) { commandDialog.close(); return; }
+        if (projectDialog.open) projectDialog.close();
+        commandInput.value = '';
+        renderCommands();
+        commandDialog.showModal();
+        commandInput.focus();
+    }
+    $('.command-trigger').addEventListener('click', openCommands);
+    commandInput.addEventListener('input', renderCommands);
+    commandDialog.addEventListener('keydown', event => {
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+            event.preventDefault();
+            if (!filteredCommands.length) return;
+            selectedResult = (selectedResult + (event.key === 'ArrowDown' ? 1 : -1) + filteredCommands.length) % filteredCommands.length;
+            const results = $$('.command-result');
+            results.forEach((item, index) => item.classList.toggle('selected', index === selectedResult));
+            results[selectedResult].scrollIntoView({ block: 'nearest' });
+        } else if (event.key === 'Enter' && event.target === commandInput) {
+            event.preventDefault();
+            executeCommand(filteredCommands[selectedResult]);
+        }
+    });
+    document.addEventListener('keydown', event => {
+        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); openCommands(); }
     });
 
-    // Add loading animation to page
-    function addLoadingAnimation() {
-        const loader = document.createElement('div');
-        loader.className = 'page-loader';
-        loader.innerHTML = `
-            <div class="loader-spinner"></div>
-            <p>Cargando...</p>
-        `;
-        
-        Object.assign(loader.style, {
-            position: 'fixed',
-            top: '0',
-            left: '0',
-            width: '100%',
-            height: '100%',
-            background: 'linear-gradient(135deg, #f8fafc 0%, #e6f0f7 100%)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: '9999',
-            color: '#336699',
-            fontSize: '1.2rem',
-            fontWeight: '500'
-        });
-
-        const spinner = loader.querySelector('.loader-spinner');
-        Object.assign(spinner.style, {
-            width: '50px',
-            height: '50px',
-            border: '4px solid #e2e8f0',
-            borderTop: '4px solid #336699',
-            borderRadius: '50%',
-            animation: 'spin 1s linear infinite',
-            marginBottom: '1rem'
-        });
-
-        // Add spinner animation
-        const spinnerStyle = document.createElement('style');
-        spinnerStyle.textContent = `
-            @keyframes spin {
-                0% { transform: rotate(0deg); }
-                100% { transform: rotate(360deg); }
-            }
-        `;
-        document.head.appendChild(spinnerStyle);
-
-        document.body.appendChild(loader);
-
-        // Remove loader after page loads
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                loader.style.opacity = '0';
-                setTimeout(() => {
-                    if (document.body.contains(loader)) {
-                        loader.remove();
-                    }
-                }, 500);
-            }, 800);
-        });
-    }
-
-    // Initialize loading animation
-    if (document.readyState === 'loading') {
-        addLoadingAnimation();
-    }
-
-    // Add some interactive easter eggs
-    let clickCount = 0;
-    const logo = document.querySelector('.nav-logo a');
-    
-    if (logo) {
-        logo.addEventListener('click', function(e) {
-            clickCount++;
-            if (clickCount === 5) {
-                showNotification('¡Has encontrado un easter egg! 🎉', 'success');
-                clickCount = 0;
-                
-                // Add some fun animation
-                document.body.style.animation = 'rainbow 2s ease-in-out';
-                setTimeout(() => {
-                    document.body.style.animation = '';
-                }, 2000);
-            }
-        });
-    }
-
-    // Add rainbow animation for easter egg
-    const rainbowStyle = document.createElement('style');
-    rainbowStyle.textContent = `
-        @keyframes rainbow {
-            0% { filter: hue-rotate(0deg); }
-            25% { filter: hue-rotate(90deg); }
-            50% { filter: hue-rotate(180deg); }
-            75% { filter: hue-rotate(270deg); }
-            100% { filter: hue-rotate(360deg); }
+    // A transparent, deterministic agent demo. No API and no claim of live AI.
+    const missions = {
+        appointments: {
+            input: 'Hola, ¿tienen una cita disponible para mañana?',
+            explanation: 'Identifico la intención de agendar, consulto los horarios disponibles y propongo opciones antes de confirmar la cita.',
+            logs: ['> intención detectada: agendar_cita', '> consultando calendario de ejemplo…', '> opciones encontradas · esperando confirmación'],
+            output: 'En este ejemplo hay espacio a las 10:00 y a las 16:30. ¿Cuál prefieres? La cita se registra solo después de tu confirmación.'
+        },
+        government: {
+            input: '¿Qué necesito para solicitar una licencia de funcionamiento?',
+            explanation: 'Reconozco el trámite, consulto una base de requisitos y organizo los siguientes pasos para la persona solicitante.',
+            logs: ['> intención detectada: consultar_trámite', '> consultando catálogo de ejemplo…', '> guía preparada · validación humana disponible'],
+            output: 'Te mostraría los requisitos del catálogo municipal y el enlace de solicitud. Si tu caso requiere revisión, lo canalizaría al área correspondiente. Los requisitos dependen del municipio.'
+        },
+        leads: {
+            input: 'Busco una propiedad para invertir. Mi presupuesto es de 2 millones.',
+            explanation: 'Extraigo necesidades y presupuesto, consulto el inventario y preparo el contexto para que el equipo comercial continúe.',
+            logs: ['> intención detectada: inversión_inmobiliaria', '> conectando inventario y CRM de ejemplo…', '> lead estructurado · listo para seguimiento'],
+            output: 'Anoto tu presupuesto de $2 millones y el objetivo de inversión. ¿En qué zona buscas? Con ese dato puedo filtrar opciones y preparar el seguimiento con un asesor.'
         }
-    `;
-    document.head.appendChild(rainbowStyle);
-});
-
-// Utility functions
-function debounce(func, wait, immediate) {
-    let timeout;
-    return function executedFunction() {
-        const context = this;
-        const args = arguments;
-        const later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        const callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
     };
-}
+    let missionKey = 'appointments';
+    let demoGeneration = 0;
+    const runButton = $('#run-demo');
+    function selectMission(key) {
+        missionKey = key;
+        demoGeneration++;
+        const mission = missions[key];
+        $$('.lab-options button').forEach(button => {
+            const active = button.dataset.mission === key;
+            button.classList.toggle('active', active);
+            button.setAttribute('aria-pressed', String(active));
+        });
+        $('#lab-input').textContent = mission.input;
+        $('#lab-output').textContent = mission.explanation;
+        $('#lab-log').textContent = '> flujo listo para ejecutar_';
+        $$('.pipeline-node').forEach(node => node.classList.remove('running', 'done'));
+        runButton.disabled = false;
+        runButton.innerHTML = 'Ejecutar simulación <span aria-hidden="true">▶</span>';
+    }
+    $$('.lab-options button').forEach(button => button.addEventListener('click', () => selectMission(button.dataset.mission)));
+    runButton.addEventListener('click', async () => {
+        const generation = ++demoGeneration;
+        const mission = missions[missionKey];
+        const nodes = $$('.pipeline-node');
+        runButton.disabled = true;
+        runButton.textContent = 'Ejecutando…';
+        $('#lab-output').textContent = 'Procesando el flujo de ejemplo…';
+        $('#lab-log').textContent = '';
+        nodes.forEach(node => node.classList.remove('running', 'done'));
+        for (let i = 0; i < nodes.length; i++) {
+            if (generation !== demoGeneration) return;
+            nodes[i].classList.add('running');
+            $('#lab-log').textContent = mission.logs.slice(0, i + 1).join('\n');
+            await new Promise(resolve => setTimeout(resolve, motionPaused ? 60 : 650));
+            if (generation !== demoGeneration) return;
+            nodes[i].classList.remove('running');
+            nodes[i].classList.add('done');
+        }
+        $('#lab-output').textContent = mission.output;
+        runButton.disabled = false;
+        runButton.innerHTML = 'Repetir simulación <span aria-hidden="true">↻</span>';
+    });
 
-// Performance optimization for scroll events
-const optimizedScroll = debounce(function() {
-    // Scroll-based animations and effects
-    const scrollTop = window.pageYOffset;
-    const windowHeight = window.innerHeight;
-    
-    // Add parallax effects or other scroll-based animations here
-    document.documentElement.style.setProperty('--scroll', scrollTop / (document.body.offsetHeight - windowHeight));
-}, 10);
-
-window.addEventListener('scroll', optimizedScroll);
+    // Contact preserves the existing Formspree destination; no submissions on load.
+    function prefillService(service) {
+        const message = $('#message');
+        if (!message.value.trim()) message.value = `Me interesa ${service.toLowerCase()}. Mi proyecto consiste en: `;
+    }
+    $('#copy-email').addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText('alejandrovillarroel@gmail.com'); toast('Email copiado. ¡Hablemos!'); }
+        catch { toast('Mi email: alejandrovillarroel@gmail.com'); }
+    });
+    const form = $('.contact-form');
+    form.addEventListener('submit', async event => {
+        event.preventDefault();
+        const status = $('.form-status');
+        const button = $('button[type="submit"]', form);
+        const name = $('#name');
+        const message = $('#message');
+        status.className = 'form-status';
+        if (!name.value.trim() || !message.value.trim()) {
+            status.textContent = 'Completa tu nombre y describe tu proyecto.';
+            status.classList.add('error');
+            (!name.value.trim() ? name : message).focus();
+            return;
+        }
+        if (button.disabled) return;
+        button.disabled = true;
+        button.textContent = 'Enviando tu idea…';
+        status.textContent = 'Enviando mensaje…';
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 20000);
+        try {
+            const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' }, signal: controller.signal });
+            if (!response.ok) throw new Error('Submission failed');
+            form.reset();
+            status.textContent = '¡Mensaje enviado! Te contactaré pronto para hablar de tu proyecto.';
+            status.classList.add('success');
+        } catch {
+            status.textContent = 'No se pudo enviar. Tu mensaje sigue aquí; intenta de nuevo o escríbeme a alejandrovillarroel@gmail.com.';
+            status.classList.add('error');
+        } finally {
+            clearTimeout(timeout);
+            button.disabled = false;
+            button.innerHTML = 'Hablemos de tu proyecto';
+        }
+    });
+})();

@@ -1,676 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Villarroel - Desarrollador, Tech Lead & Especialista en IA</title>
-    <meta name="description" content="Desarrollador especializado en tecnologías modernas e inteligencia artificial. Creando experiencias digitales excepcionales con IA.">
-    <meta name="keywords" content="desarrollador web, senior, JavaScript, React, Node.js, inteligencia artificial, IA, chatbots, WhatsApp bots">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#1f1f1f">
+<title>Alejandro Villarroel — Full-stack, IA & Tech Lead</title>
+<meta name="description" content="Alejandro Villarroel. Más de 10 años construyendo plataformas web, automatizaciones y soluciones con inteligencia artificial para empresas y gobierno. Explora mi universo de proyectos.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header y Navigation -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="#home">AV</a>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Inicio</a></li>
-                    <li><a href="#about" class="nav-link">Sobre mí</a></li>
-                    <li><a href="#services" class="nav-link">Servicios</a></li>
-                    <li><a href="#projects" class="nav-link">Proyectos Profesionales</a></li>
-                    <li><a href="#skills" class="nav-link">Tecnologías</a></li>
-                    <li><a href="#experience" class="nav-link">Experiencia</a></li>
-                    <li><a href="#contact" class="nav-link">Contacto</a></li>
-                </ul>
-                <div class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="header"><nav class="nav container" aria-label="Navegación principal">
+<a class="logo" href="#home" aria-label="Alejandro Villarroel, inicio">alejandroVillarroel<span aria-hidden="true">_</span></a>
+<div class="nav-menu" id="nav-menu"><a href="#projects">Proyectos</a><a href="#about">Sobre mí</a><a href="#services">Servicios</a><a href="#lab">Lab</a><a href="#contact" class="nav-contact">Hablemos</a></div>
+<div class="nav-tools"><button class="command-trigger" aria-label="Abrir buscador de proyectos y secciones" title="Buscar · Ctrl o ⌘ K"><span aria-hidden="true">⌘</span><kbd>K</kbd></button><button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú"><span></span><span></span></button></div>
+</nav></header>
+<main id="main">
+<section id="home" class="hero"><div class="container">
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Hola, soy <span class="highlight">Alejandro Villarroel</span>
-                </h1>
-                <h2 class="hero-subtitle">Desarrollador  & Especialista en IA | Tech Lead</h2>
-                <p class="hero-description">
-                    Construyo sistemas web, automatizaciones e integraciones con IA para empresas y gobierno.
-                    Disponible para proyectos a medida, consultoría técnica y liderazgo de desarrollo.
-                </p>
-                <p class="availability-note">
-                    Disponible para proyectos freelance, consultoría técnica y desarrollo de sistemas a medida.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Cotizar Proyecto</a>
-                    <a href="#projects" class="btn btn-secondary">Ver Sistemas</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-circle">
-                    <img src="assets/foto2-hero.jpg" alt="Alejandro Villarroel" width="600" height="600" fetchpriority="high" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
-                </div>
-                <div class="hero-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="hero-ai-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+<div class="hero-grid">
+<div class="hero-copy">
+<h1>CONSTRUYO<br>EL SIGUIENTE<br><span class="outline-word">NIVEL<span class="title-dot">.</span></span></h1>
+<div class="hero-bio"><span class="bio-line" aria-hidden="true"></span><p>Soy <strong>Alejandro Villarroel.</strong><br>Transformo ideas complejas en sistemas que funcionan. Código, inteligencia artificial y un poco de inconformismo.</p></div>
+<div class="hero-actions"><a class="btn btn-primary" href="#projects">Explorar proyectos</a><a class="text-link" href="#contact">¿Tienes una idea?</a></div>
+</div>
+<div class="hero-showcase" role="group" aria-label="Una selección de mis proyectos">
+<p class="showcase-label mono">IDEAS QUE YA EXISTEN</p>
+<button class="showcase-card showcase-main" data-open-project="3" aria-label="Ver proyecto Ventanilla Digital Monterrey">
+<span class="showcase-card-heading"><span>Ventanilla Digital Monterrey</span><span class="showcase-category">Gobierno digital</span></span>
+<img src="assets/ventanilla-monterrey-card.jpg" alt="Portal de trámites y servicios de Ventanilla Digital Monterrey" width="1280" height="720" fetchpriority="high" decoding="async">
+</button>
+<button class="showcase-card showcase-garner" data-open-project="5" aria-label="Ver proyecto Garner System 3.0">
+<img src="assets/garner-ia-card.jpg" alt="Vista de Garner System 3.0" width="900" height="500" decoding="async">
+<span class="showcase-card-caption"><strong>Garner System 3.0</strong><span>Gestión con IA</span></span>
+</button>
+<button class="showcase-card showcase-agent" data-open-project="6" aria-label="Ver proyecto Agentecitas">
+<img src="assets/agentecitas-card.jpg" alt="Conversación de ejemplo del agente de WhatsApp de Agentecitas" width="900" height="500" decoding="async">
+<span class="showcase-card-caption"><strong>Agentecitas</strong><span>Conversaciones que resuelven</span></span>
+</button>
+</div>
+</div>
+<div class="hero-bottom"><a class="scroll-hint mono" href="#projects"><span class="scroll-circle" aria-hidden="true">↓</span> Explorar proyectos</a><div class="hero-stats"><div><strong>10<span>+</span></strong><span>AÑOS CREANDO</span></div><div><strong>08</strong><span>PROYECTOS DESTACADOS</span></div><div><strong>∞</strong><span>POSIBILIDADES</span></div></div></div>
+</div></section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="tech-visual">
-                        <div class="code-container">
-                            <div class="code-line">
-                                <span class="code-keyword">const</span> 
-                                <span class="code-variable">developer</span> = {
-                            </div>
-                            <div class="code-line indent">
-                                <span class="code-property">name:</span> 
-                                <span class="code-string">'Alejandro Villarroel'</span>,
-                            </div>
-                            <div class="code-line indent">
-                                <span class="code-property">skills:</span> [
-                                <span class="code-string">'JavaScript'</span>,
-                                <span class="code-string">'React'</span>,
-                                <span class="code-string">'AI'</span>],
-                            </div>
-                            <div class="code-line indent">
-                                <span class="code-property">experience:</span> 
-                                <span class="code-number">'10+ years'</span>,
-                            </div>
-                            <div class="code-line indent">
-                                <span class="code-property">teamLead:</span> 
-                                <span class="code-boolean">true</span>,
-                            </div>
-                            <div class="code-line indent">
-                                <span class="code-property">passion:</span> 
-                                <span class="code-string">'Innovation'</span>
-                            </div>
-                            <div class="code-line">};</div>
-                        </div>
-                        <div class="floating-icons">
-                            <div class="floating-icon" style="--delay: 0s;"><i class="fab fa-js-square"></i></div>
-                            <div class="floating-icon" style="--delay: 1s;"><i class="fab fa-react"></i></div>
-                            <div class="floating-icon" style="--delay: 2s;"><i class="fas fa-robot"></i></div>
-                            <div class="floating-icon" style="--delay: 3s;"><i class="fab fa-node-js"></i></div>
-                            <div class="floating-icon" style="--delay: 4s;"><i class="fas fa-database"></i></div>
-                            <div class="floating-icon" style="--delay: 5s;"><i class="fas fa-brain"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p>
-                        Soy desarrollador full-stack y Tech Lead con más de 10 años creando plataformas web,
-                        sistemas de gestión y soluciones digitales para empresas y gobierno.
-                    </p>
-                    <p>
-                        Me especializo en aplicaciones modernas con <strong>React, Node.js e inteligencia artificial</strong>,
-                        incluyendo chatbots, automatización de procesos, integración de APIs y herramientas que
-                        mejoran la operación diaria de los equipos.
-                    </p>
-                    <p>
-                        He liderado equipos de desarrollo, coordinando entregas, arquitectura y calidad técnica
-                        con enfoque en soluciones escalables, mantenibles y alineadas a objetivos reales de negocio.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="process" class="section project-process" aria-labelledby="process-title"><div class="container">
+<div class="section-heading"><div><h2 id="process-title">De tu idea<br><span class="muted">a un sistema.</span></h2></div></div>
+<ol class="process-steps" role="list" aria-label="Pasos del proceso de desarrollo">
+<li><span class="process-number" aria-hidden="true">01</span><div><h3>Platicamos tu idea</h3><p>Entendemos el problema y definimos el alcance y las prioridades.</p></div></li>
+<li><span class="process-number" aria-hidden="true">02</span><div><h3>Creamos un prototipo</h3><p>Visualizamos las pantallas y validamos el flujo antes de programar.</p></div></li>
+<li><span class="process-number" aria-hidden="true">03</span><div><h3>Desarrollamos el sistema</h3><p>Construimos las funciones e integraciones con avances que puedes revisar.</p></div></li>
+<li><span class="process-number" aria-hidden="true">04</span><div><h3>Probamos y ajustamos</h3><p>Revisamos los casos de uso, corregimos errores y validamos contigo.</p></div></li>
+<li><span class="process-number" aria-hidden="true">05</span><div><h3>Liberamos el proyecto</h3><p>Lo ponemos en marcha y te acompañamos en la entrega y los primeros pasos.</p></div></li>
+</ol>
+</div></section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Qué Puedo Hacer por tu Negocio</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-window-restore"></i>
-                    </div>
-                    <h3>Plataformas Web a Medida</h3>
-                    <p>Sistemas internos, portales, CRMs y herramientas operativas diseñadas para resolver procesos reales.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Automatización con IA</h3>
-                    <p>Flujos inteligentes para responder, clasificar, consultar información y reducir trabajo repetitivo.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h3>Bots de WhatsApp</h3>
-                    <p>Agentes conversacionales para atención, citas, seguimiento de clientes y operación 24/7.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Dashboards y Reportes</h3>
-                    <p>Paneles de control para visualizar métricas, avances, solicitudes, costos y rendimiento operativo.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <h3>Integraciones y APIs</h3>
-                    <p>Conexión entre sistemas, pasarelas de pago, formularios, bases de datos y servicios externos.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users-cog"></i>
-                    </div>
-                    <h3>Consultoría Técnica</h3>
-                    <p>Arquitectura, dirección técnica, rescate de proyectos y acompañamiento para equipos de desarrollo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Proyectos Profesionales</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/altum-card.jpg" alt="Altum" width="900" height="500" loading="lazy" decoding="async">
-
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://altum.up.railway.app/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Altum</h3>
-                        <p class="project-description">
-                            Plataforma inmobiliaria para explorar propiedades, gestionar solicitudes de contacto
-                            y centralizar la experiencia comercial con automatización, CRM y asistencia basada en IA.
-                        </p>
-                        <p class="project-impact">Impacto: acelera la captación de leads y ordena el seguimiento comercial.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Material UI</span>
-                            <span class="tech-tag">CRM</span>
-                            <span class="tech-tag">IA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/palanteganado-card.jpg" alt="Palante Ganado" width="900" height="500" loading="lazy" decoding="async">
-
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://palanteganado.com/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Palante Ganado</h3>
-                        <p class="project-description">
-                            Plataforma integral para la administración digital de ganado en ranchos. 
-                            Permite el seguimiento en tiempo real del inventario, registro de movimientos 
-                            y generación de reportes detallados para optimizar la gestión ganadera.
-                        </p>
-                        <p class="project-impact">Impacto: convierte inventario, movimientos y reportes en una operación trazable.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-
-
-                    <div class="project-image">
-                        <img src="assets/ventanilla-card.jpg" alt="Ventanilla Digital" width="900" height="500" loading="lazy" decoding="async">
-
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="http://cancun-digital.mx/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Ventanilla Digital</h3>
-                        <p class="project-description">
-                            Plataforma innovadora para la creación y gestión de trámites gubernamentales en línea. 
-                            Facilita el acceso a servicios públicos, reduce tiempos de espera 
-                            y mejora la eficiencia en procesos administrativos.
-                        </p>
-                        <p class="project-impact">Impacto: reduce fricción ciudadana y digitaliza procesos de atención pública.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/ventanilla-v8-card.jpg" alt="Ventanilla Digital v8" width="900" height="500" loading="lazy" decoding="async">
-
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://spgg-ia.gobierno-digital.mx/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Ventanilla Digital v8</h3>
-                        <p class="project-description">
-                            Nueva versión de la plataforma para gestión digital de trámites municipales,
-                            con automatización, seguimiento de solicitudes y herramientas de atención
-                            ciudadana impulsadas por IA.
-                        </p>
-                        <p class="project-impact">Impacto: moderniza trámites municipales con asistencia inteligente y autoservicio.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">IA</span>
-                            <span class="tech-tag">Gobierno Digital</span>
-                            <span class="tech-tag">Automatización</span>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/matias-card.jpg" alt="Sistema MatIAs" width="900" height="500" loading="lazy" decoding="async">
-
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="http://matias.gobierno-digital.mx/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Sistema MatIAs</h3>
-                        <p class="project-description">
-                            Bot inteligente para WhatsApp con integración de Gemini para respuestas 
-                            automáticas, procesamiento de lenguaje natural y automatización de procesos de negocio.
-                        </p>
-                        <p class="project-impact">Impacto: atiende conversaciones frecuentes sin depender siempre de un operador.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Gemini API</span>
-                            <span class="tech-tag">WhatsApp API</span>
-                            <span class="tech-tag">Socket.io</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/garner-ia-card.jpg" alt="Garner System 3.0" width="900" height="500" loading="lazy" decoding="async">
-
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://monterrey.garner-ia.com/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Garner System 3.0</h3>
-                        <p class="project-description">
-                            Nueva versión del sistema para planificación, priorización y entrega de resultados
-                            con IA. Integra seguimiento operativo, tableros de control y flujos de trabajo para
-                            gobiernos municipales.
-                        </p>
-                        <p class="project-impact">Impacto: da visibilidad ejecutiva a prioridades, avances y operación diaria.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">IA</span>
-                            <span class="tech-tag">Dashboards</span>
-                            <span class="tech-tag">Gobierno Digital</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/agentecitas-card.jpg" alt="Agentecitas" width="900" height="500" loading="lazy" decoding="async">
-
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://agentecitas.up.railway.app/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Agentecitas</h3>
-                        <p class="project-description">
-                            Agente conversacional para WhatsApp que automatiza la atención, agenda citas,
-                            gestiona servicios y centraliza el seguimiento operativo de negocios con asistencia
-                            inteligente.
-                        </p>
-                        <p class="project-impact">Impacto: agenda y responde clientes 24/7 sin saturar al equipo humano.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">WhatsApp</span>
-                            <span class="tech-tag">IA</span>
-                            <span class="tech-tag">CRM</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/aguacatin-card.jpg" alt="Aguacatin" width="900" height="500" loading="lazy" decoding="async">
-
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://aguacatin.com/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Aguacatin</h3>
-                        <p class="project-description">
-                            Plataforma innovadora para conectar distribuidores de pañales, 
-                            permitiendo comparar precios y ofertas en tiempo real. 
-                            Facilita la distribución eficiente y el acceso a mejores oportunidades de negocio.
-                        </p>
-                        <p class="project-impact">Impacto: facilita comparación de ofertas y mejora decisiones de compra.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Express</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Stack Técnico</h2>
-            <p class="section-intro">
-                Herramientas que uso para entregar productos funcionales, escalables y fáciles de operar.
-            </p>
-            <div class="skills-content">
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML5</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>CSS3</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js-square"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <span>React</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-node-js"></i>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-server"></i>
-                        <span>Express</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <span>MongoDB</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-wordpress"></i>
-                        <span>WordPress</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-table"></i>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-network-wired"></i>
-                        <span>REST APIs</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-aws"></i>
-                        <span>AWS</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-cloud"></i>
-                        <span>Railway</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-git-alt"></i>
-                        <span>Git</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-robot"></i>
-                        <span>Codex</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-brain"></i>
-                        <span>Claude AI</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp Bots</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-cogs"></i>
-                        <span>Process Automation</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-users"></i>
-                        <span>Team Leadership</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-project-diagram"></i>
-                        <span>Project Management</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-sync"></i>
-                        <span>Agile Methodologies</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experiencia Profesional</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Director de Desarrollo</h3>
-                        <p class="timeline-company">Smart City Soft · Ciudad Victoria, Tamaulipas</p>
-                        <p class="timeline-period">2022 - Actualidad</p>
-                        <ul class="timeline-description">
-                            <li><strong>Gestión de equipo:</strong> Dirección y mentoría de un equipo de 8 programadores</li>
-                            <li>Coordinación de proyectos complejos con integración de IA y automatización</li>
-                            <li>Desarrollo de estrategias tecnológicas para ciudades inteligentes</li>
-                            <li>Implementación de mejores prácticas en desarrollo de software y gestión de proyectos</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Jefe del departamento de Programación</h3>
-                        <p class="timeline-company">Gobierno del Estado de Tamaulipas · Ciudad Victoria, Tamaulipas</p>
-                        <p class="timeline-period">2016 - 2022</p>
-                        <ul class="timeline-description">
-                            <li>Dirección del departamento de programación y desarrollo de soluciones gubernamentales</li>
-                            <li>Implementación de metodologías ágiles y procesos de desarrollo eficientes</li>
-                            <li>Supervisión de proyectos críticos para la modernización digital del gobierno estatal</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Lead Web Developer</h3>
-                        <p class="timeline-company">Creative Social Studios · McAllen, Texas</p>
-                        <p class="timeline-period">2012 - 2016</p>
-                        <ul class="timeline-description">
-                            <li>Desarrollo y liderazgo de proyectos web innovadores para empresas y organizaciones</li>
-                            <li><strong>Administración de WordPress:</strong> Gestión y mantenimiento de sitios web con miles de usuarios activos</li>
-                            <li>Optimización de rendimiento para sitios de alto tráfico y escalabilidad</li>
-                            <li>Desarrollo de temas y plugins personalizados para WordPress</li>
-                            <li>Implementación de soluciones de e-commerce y sistemas de gestión de contenido</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">¿Trabajamos Juntos?</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-intro">
-                        <p class="contact-description">
-                            Estoy disponible para proyectos freelance, consultoría técnica y desarrollo de sistemas a medida.
-                            Cuéntame qué proceso quieres mejorar y te propongo una ruta clara para construirlo.
-                        </p>
-                    </div>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <strong>Email</strong>
-                                <span><a href="mailto:alejandrovillarroel@gmail.com">alejandrovillarroel@gmail.com</a></span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="contact-text">
-                                <strong>GitHub</strong>
-                                <span><a href="https://github.com/alejandrov" target="_blank">github.com/alejandrov</a></span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <strong>Ubicación</strong>
-                                <span>Tamaulipas, México</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form class="form" method="POST" action="https://formspree.io/f/xgvpwwoz">
-                        <input type="hidden" name="_subject" value="Contacto alejandrov.github.io">
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <div class="form-footer">
-                            <button type="submit" class="btn btn-primary">Solicitar Cotización</button>
-                            <div class="social-links">
-                                <a href="https://github.com/alejandrov" target="_blank" class="social-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&nbsp; </p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Inicio</a>
-                    <a href="#about">Sobre mí</a>
-                    <a href="#services">Servicios</a>
-                    <a href="#projects">Proyectos Profesionales</a>
-                    <a href="#contact">Contacto</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<section id="projects" class="section projects"><div class="container"><div class="section-heading"><div><h2>Menos promesas.<br><span class="muted">Más cosas construidas.</span></h2></div></div>
+<div class="project-toolbar"><div class="filters" role="group" aria-label="Filtrar proyectos"><button class="active" data-filter="all" aria-pressed="true">Todos <span>08</span></button><button data-filter="ai" aria-pressed="false">Inteligencia artificial</button><button data-filter="government" aria-pressed="false">Gobierno digital</button><button data-filter="web" aria-pressed="false">Plataformas web</button></div><p class="mono project-count" aria-live="polite">MOSTRANDO 08 / 08</p></div>
+<div class="projects-grid"><article class="project-card" data-category="web ai" data-project="0">
+    <button class="project-preview" data-open-project="0" aria-label="Explorar Aqua Vivant"><img src="assets/aqua-vivant-card.jpg" alt="Vista de Aqua Vivant" width="1280" height="720" loading="lazy" decoding="async"><span class="preview-shade"></span><span class="preview-action">Explorar proyecto</span></button>
+    <div class="project-info"><h3><button data-open-project="0">Aqua Vivant</button></h3><p>Plataforma inmobiliaria para explorar propiedades, gestionar solicitudes de contacto y centralizar la experiencia comercial con automatización, CRM y asistencia basada en IA.</p><div class="project-tech"><span>React</span><span>Material UI</span><span>CRM</span><span>IA</span></div></div></article>
+<article class="project-card" data-category="web" data-project="1">
+    <button class="project-preview" data-open-project="1" aria-label="Explorar Palante Ganado"><img src="assets/palanteganado-card.jpg" alt="Vista de Palante Ganado" width="900" height="500" loading="lazy" decoding="async"><span class="preview-shade"></span><span class="preview-action">Explorar proyecto</span></button>
+    <div class="project-info"><h3><button data-open-project="1">Palante Ganado</button></h3><p>Plataforma integral para la administración digital de ganado en ranchos. Permite el seguimiento en tiempo real del inventario, registro de movimientos y generación de reportes detallados para optimizar la gestión ganadera.</p><div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span></div></div></article>
+<article class="project-card" data-category="government" data-project="2">
+    <button class="project-preview" data-open-project="2" aria-label="Explorar Ventanilla Digital"><img src="assets/ventanilla-card.jpg" alt="Vista de Ventanilla Digital" width="900" height="500" loading="lazy" decoding="async"><span class="preview-shade"></span><span class="preview-action">Explorar proyecto</span></button>
+    <div class="project-info"><h3><button data-open-project="2">Ventanilla Digital</button></h3><p>Plataforma innovadora para la creación y gestión de trámites gubernamentales en línea. Facilita el acceso a servicios públicos, reduce tiempos de espera y mejora la eficiencia en procesos administrativos.</p><div class="project-tech"><span>Vue.js</span><span>Express</span><span>PostgreSQL</span></div></div></article>
+<article class="project-card" data-category="government ai" data-project="3">
+    <button class="project-preview" data-open-project="3" aria-label="Explorar Ventanilla Digital Monterrey"><img src="assets/ventanilla-monterrey-card.jpg" alt="Vista de Ventanilla Digital Monterrey" width="1280" height="720" loading="lazy" decoding="async"><span class="preview-shade"></span><span class="preview-action">Explorar proyecto</span></button>
+    <div class="project-info"><h3><button data-open-project="3">Ventanilla Digital Monterrey</button></h3><p>Nueva versión de la plataforma para gestión digital de trámites municipales, con automatización, seguimiento de solicitudes y herramientas de atención ciudadana impulsadas por IA.</p><div class="project-tech"><span>React</span><span>IA</span><span>Gobierno Digital</span><span>Automatización</span></div></div></article>
+<article class="project-card" data-category="ai" data-project="4">
+    <button class="project-preview" data-open-project="4" aria-label="Explorar Sistema MatIAs"><img src="assets/matias-card.jpg" alt="Vista de Sistema MatIAs" width="900" height="500" loading="lazy" decoding="async"><span class="preview-shade"></span><span class="preview-action">Explorar proyecto</span></button>
+    <div class="project-info"><h3><button data-open-project="4">Sistema MatIAs</button></h3><p>Bot inteligente para WhatsApp con integración de Gemini para respuestas automáticas, procesamiento de lenguaje natural y automatización de procesos de negocio.</p><div class="project-tech"><span>Node.js</span><span>Gemini API</span><span>WhatsApp API</span><span>Socket.io</span><span>MongoDB</span></div></div></article>
+<article class="project-card" data-category="government ai" data-project="5">
+    <button class="project-preview" data-open-project="5" aria-label="Explorar Garner System 3.0"><img src="assets/garner-ia-card.jpg" alt="Vista de Garner System 3.0" width="900" height="500" loading="lazy" decoding="async"><span class="preview-shade"></span><span class="preview-action">Explorar proyecto</span></button>
+    <div class="project-info"><h3><button data-open-project="5">Garner System 3.0</button></h3><p>Nueva versión del sistema para planificación, priorización y entrega de resultados con IA. Integra seguimiento operativo, tableros de control y flujos de trabajo para gobiernos municipales.</p><div class="project-tech"><span>React</span><span>IA</span><span>Dashboards</span><span>Gobierno Digital</span></div></div></article>
+<article class="project-card" data-category="ai" data-project="6">
+    <button class="project-preview" data-open-project="6" aria-label="Explorar Agentecitas"><img src="assets/agentecitas-card.jpg" alt="Vista de Agentecitas" width="900" height="500" loading="lazy" decoding="async"><span class="preview-shade"></span><span class="preview-action">Explorar proyecto</span></button>
+    <div class="project-info"><h3><button data-open-project="6">Agentecitas</button></h3><p>Agente conversacional para WhatsApp que automatiza la atención, agenda citas, gestiona servicios y centraliza el seguimiento operativo de negocios con asistencia inteligente.</p><div class="project-tech"><span>React</span><span>WhatsApp</span><span>IA</span><span>CRM</span></div></div></article>
+<article class="project-card" data-category="web" data-project="7">
+    <button class="project-preview" data-open-project="7" aria-label="Explorar Aguacatin"><img src="assets/aguacatin-card.jpg" alt="Vista de Aguacatin" width="900" height="500" loading="lazy" decoding="async"><span class="preview-shade"></span><span class="preview-action">Explorar proyecto</span></button>
+    <div class="project-info"><h3><button data-open-project="7">Aguacatin</button></h3><p>Plataforma innovadora para conectar distribuidores de pañales, permitiendo comparar precios y ofertas en tiempo real. Facilita la distribución eficiente y el acceso a mejores oportunidades de negocio.</p><div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Express</span></div></div></article></div></div></section>
+<section id="about" class="section about"><div class="container about-grid"><div class="player-card"><div class="portrait-wrap"><img src="assets/foto2-hero.jpg" alt="Alejandro Villarroel" width="600" height="600" loading="lazy" decoding="async"><span class="portrait-grid" aria-hidden="true"></span></div><div class="player-info"><h3>Alejandro Villarroel</h3><p class="mono">FULL-STACK / TECH LEAD / IA</p></div></div>
+<div class="about-copy"><h2>La tecnología es el medio.<br><span class="muted">El impacto, la misión.</span></h2><p>Soy desarrollador full-stack y Tech Lead con más de 10 años creando plataformas web, sistemas de gestión y soluciones digitales para empresas y gobierno.</p><p>Me especializo en aplicaciones modernas con <strong>React, Node.js e inteligencia artificial</strong>: chatbots, automatización de procesos, integración de APIs y herramientas que mejoran la operación diaria de los equipos.</p><p>He liderado equipos de desarrollo, coordinando entregas, arquitectura y calidad técnica. Mi enfoque: soluciones escalables, mantenibles y alineadas a objetivos reales de negocio.</p><a class="text-link" href="#experience">Explora mi trayectoria <span aria-hidden="true">↓</span></a></div></div></section>
+<section id="services" class="section services"><div class="container"><div class="section-heading"><div><h2>Tu siguiente reto.<br><span class="muted">Mi siguiente misión.</span></h2></div></div><div class="services-grid"><article class="service-card" data-service="Plataformas web"><div class="service-top"><svg class="service-symbol" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="26" height="24" rx="3"/><path d="M3 11h26M8 7.5h.01M12 7.5h.01M16 7.5h.01M12 16l-4 4 4 4M20 16l4 4-4 4"/></svg></div><h3>Plataformas web</h3><p>Sistemas internos, portales, CRMs y herramientas operativas diseñadas para resolver procesos reales.</p></article><article class="service-card" data-service="Automatización con IA"><div class="service-top"><svg class="service-symbol" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 7a4 4 0 0 0-7-2.5A4 4 0 0 0 5 11a5 5 0 0 0 0 9 4 4 0 0 0 4 6.5A4 4 0 0 0 16 25V7ZM9 4.5V9l3 3M5 11h4M5 20h4l3-3M9 26.5V22M16 10h5l3-4M16 16h10M16 22h5l3 4"/><circle cx="25" cy="4" r="2"/><circle cx="28" cy="16" r="2"/><circle cx="25" cy="28" r="2"/></svg></div><h3>Automatización con IA</h3><p>Flujos inteligentes para responder, clasificar, consultar información y reducir trabajo repetitivo.</p></article><article class="service-card" data-service="Bots de WhatsApp"><div class="service-top"><svg class="service-symbol" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M28 15.5A12.5 12.5 0 0 1 9.4 26.4L3 29l2.4-6.5A12.5 12.5 0 1 1 28 15.5Z"/><path d="m11 9-2 1c-1 1-1 3 1 6s5 6 8 7c2 .5 4-.5 4-2l-1-2-4-1-1 2c-2-1-4-3-5-5l2-1-2-5Z"/></svg></div><h3>Bots de WhatsApp</h3><p>Agentes conversacionales para atención, citas, seguimiento de clientes y operación 24/7.</p></article><article class="service-card" data-service="Dashboards y reportes"><div class="service-top"><svg class="service-symbol" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="26" height="26" rx="3"/><path d="M8 24V16h4v8M14 24V8h4v16M20 24V12h4v12M7 24h18"/></svg></div><h3>Dashboards y reportes</h3><p>Paneles de control para visualizar métricas, avances, solicitudes, costos y rendimiento operativo.</p></article><article class="service-card" data-service="Integraciones y APIs"><div class="service-top"><svg class="service-symbol" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="12" y="12" width="8" height="8" rx="2"/><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="23" y="3" width="6" height="6" rx="1.5"/><rect x="3" y="23" width="6" height="6" rx="1.5"/><rect x="23" y="23" width="6" height="6" rx="1.5"/><path d="m9 9 4 4m6 0 4-4M9 23l4-4m6 0 4 4"/></svg></div><h3>Integraciones y APIs</h3><p>Conexión entre sistemas, pasarelas de pago, formularios, bases de datos y servicios externos.</p></article><article class="service-card" data-service="Consultoría técnica"><div class="service-top"><svg class="service-symbol" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="4"/><path d="M3 27v-3a7 7 0 0 1 14 0v3M20 4h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-3l-4 4v-4h-1M23 8h3M23 12h3"/></svg></div><h3>Consultoría técnica</h3><p>Arquitectura, dirección técnica, rescate de proyectos y acompañamiento para equipos de desarrollo.</p></article></div></div></section>
+<section id="lab" class="section lab"><div class="container lab-grid"><div><h2>¿Y si tu próximo<br><span class="soft-accent">colaborador es IA?</span></h2><p class="lab-description">Explora cómo un agente puede conectar conversaciones, datos y acciones. Elige una misión y observa el flujo.</p><div class="lab-options" role="group" aria-label="Selecciona una simulación"><button data-mission="appointments" class="active" aria-pressed="true">Agendar una cita</button><button data-mission="government" aria-pressed="false">Consultar un trámite</button><button data-mission="leads" aria-pressed="false">Calificar un lead</button></div></div>
+<div class="lab-terminal"><div class="terminal-bar"><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Simulación de agente</span></div><div class="lab-chat"><div class="message-label mono">Tu mensaje</div><p id="lab-input">Hola, ¿tienen una cita disponible para mañana?</p><div class="pipeline"><div class="pipeline-node"><strong>Entender</strong></div><span class="pipeline-arrow">→</span><div class="pipeline-node"><strong>Conectar</strong></div><span class="pipeline-arrow">→</span><div class="pipeline-node"><strong>Resolver</strong></div></div><div class="message-label mono accent">Respuesta de ejemplo</div><p id="lab-output" class="agent-output" aria-live="polite">Identifico la intención de agendar, consulto los horarios disponibles y propongo opciones antes de confirmar la cita.</p><div class="lab-log mono" id="lab-log" aria-live="polite">&gt; flujo listo para ejecutar_</div><div class="lab-terminal-footer"><button class="btn btn-primary" id="run-demo">Ejecutar simulación <span aria-hidden="true">▶</span></button></div></div></div></div></section>
+<section id="skills" class="section stack"><div class="container"><div class="section-heading"><div><h2>El stack cambia.<br><span class="muted">La curiosidad se queda.</span></h2></div></div><div class="stack-list"><div class="stack-row"><h3>Interfaz</h3><div><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>WordPress</span></div></div><div class="stack-row"><h3>Sistemas</h3><div><span>Node.js</span><span>Express</span><span>MongoDB</span><span>PostgreSQL</span><span>REST APIs</span></div></div><div class="stack-row"><h3>Inteligencia</h3><div><span>Codex</span><span>Claude AI</span><span>WhatsApp Bots</span><span>Process Automation</span></div></div><div class="stack-row"><h3>Entrega</h3><div><span>AWS</span><span>Railway</span><span>Git</span><span>Team Leadership</span><span>Project Management</span><span>Agile Methodologies</span></div></div></div></div></section>
+<section id="experience" class="section experience"><div class="container"><div class="section-heading"><div><h2>Una trayectoria.<br><span class="muted">Muchos siguientes niveles.</span></h2></div></div><div class="timeline">
+<article class="experience-item"><div class="experience-header"><span class="experience-date mono">2022 — HOY<span class="status-dot"></span></span><span class="experience-heading"><strong>Director de Desarrollo</strong><span>Smart City Soft · Ciudad Victoria, Tamaulipas</span></span></div><div class="experience-body"><p>Dirección y mentoría de un equipo de <strong>8 programadores</strong>, coordinando arquitectura, entregas y calidad técnica.</p><ul><li>Coordinación de proyectos complejos con integración de IA y automatización.</li><li>Desarrollo de estrategias tecnológicas para ciudades inteligentes.</li><li>Implementación de mejores prácticas en desarrollo de software y gestión de proyectos.</li></ul></div></article>
+<article class="experience-item"><div class="experience-header"><span class="experience-date mono">2016 — 2022</span><span class="experience-heading"><strong>Jefe del departamento de Programación</strong><span>Gobierno del Estado de Tamaulipas · Ciudad Victoria, Tamaulipas</span></span></div><div class="experience-body"><ul><li>Dirección del departamento de programación y desarrollo de soluciones gubernamentales.</li><li>Implementación de metodologías ágiles y procesos de desarrollo eficientes.</li><li>Supervisión de proyectos críticos para la modernización digital del gobierno estatal.</li></ul></div></article>
+<article class="experience-item"><div class="experience-header"><span class="experience-date mono">2012 — 2016</span><span class="experience-heading"><strong>Lead Web Developer</strong><span>Creative Social Studios · McAllen, Texas</span></span></div><div class="experience-body"><ul><li>Desarrollo y liderazgo de proyectos web innovadores para empresas y organizaciones.</li><li>Administración y mantenimiento de sitios WordPress con miles de usuarios activos.</li><li>Optimización de rendimiento para sitios de alto tráfico y escalabilidad.</li><li>Desarrollo de temas y plugins personalizados para WordPress.</li><li>Implementación de soluciones de e-commerce y sistemas de gestión de contenido.</li></ul></div></article></div></div></section>
+<section id="contact" class="section contact"><div class="container contact-grid"><div class="contact-copy"><h2>LAS BUENAS<br>IDEAS MERECEN<br><span class="soft-accent">EXISTIR</span></h2><p>Disponible para proyectos freelance, consultoría técnica y desarrollo de sistemas a medida. Cuéntame qué proceso quieres mejorar y construyamos el siguiente nivel.</p><a class="contact-email" href="mailto:alejandrovillarroel@gmail.com">alejandrovillarroel@gmail.com</a><div class="contact-links"><a href="https://github.com/alejandrov" target="_blank" rel="noopener noreferrer">GitHub</a><button id="copy-email">Copiar email <span aria-hidden="true">⧉</span></button><span>Tamaulipas, México</span></div></div>
+<form class="contact-form" method="POST" action="https://formspree.io/f/xgvpwwoz"><input type="hidden" name="_subject" value="Contacto alejandrov.github.io"><div class="form-group"><label for="name">¿Cómo te llamas?</label><input id="name" name="name" autocomplete="name" placeholder="Tu nombre" maxlength="120" required></div><div class="form-group"><label for="email">¿Dónde te encuentro?</label><input type="email" id="email" name="email" autocomplete="email" placeholder="tu@email.com" maxlength="254" required></div><div class="form-group"><label for="message">Cuéntame tu idea</label><textarea id="message" name="message" rows="4" placeholder="Quiero construir algo que…" maxlength="5000" required></textarea></div><button type="submit" class="btn btn-primary">Hablemos de tu proyecto</button><p class="form-status" role="status" aria-live="polite">Tu mensaje llega directamente a mi correo.</p></form></div></section>
+</main>
+<footer class="site-footer"><div class="footer container"><a class="logo" href="#home" aria-label="Volver al inicio">av<span>_</span></a><p class="mono">© <span id="year">2026</span> ALEJANDRO VILLARROEL<br>HECHO CON CÓDIGO, CAFÉ Y CURIOSIDAD.</p><a href="#home" class="back-top mono">VOLVER AL INICIO <span aria-hidden="true">↑</span></a></div></footer>
+<dialog id="project-dialog" class="project-dialog" aria-labelledby="project-dialog-title"><button class="dialog-close" aria-label="Cerrar proyecto">×</button><div id="project-dialog-body"></div></dialog>
+<dialog id="command-dialog" class="command-dialog" aria-labelledby="command-title"><div class="command-top"><label id="command-title" for="command-search">EXPLORA EL UNIVERSO</label><button class="dialog-close" aria-label="Cerrar buscador">×</button></div><input id="command-search" type="search" placeholder="Busca un proyecto, servicio o sección…" autocomplete="off"><div id="command-results"></div><div class="command-footer mono">↑ ↓ NAVEGAR &nbsp; ↵ EXPLORAR <span>ESC PARA CERRAR</span></div></dialog>
+<div class="toast" role="status" aria-live="polite" hidden></div>
+</body></html>

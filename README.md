@@ -1,77 +1,44 @@
-# Alejandro Villarroel - Desarrollador Web Senior
+# Alejandro Villarroel — Portfolio Nexus
 
-¡Bienvenido a mi sitio web profesional! 🚀
+Portafolio de Alejandro Villarroel: desarrollo full-stack, liderazgo técnico e inteligencia artificial. Diseño inspirado en interfaces de videojuegos y sistemas futuristas, conservando los ocho proyectos, servicios, tecnologías, experiencia y datos de contacto del sitio original.
 
-## Acerca del Sitio
+## Ejecutar localmente
 
-Este sitio web fue diseñado para mostrar mi perfil profesional como desarrollador web senior, incluyendo:
+No requiere instalación ni proceso de compilación. Desde la raíz del repositorio:
 
-- **Portafolio de Proyectos**: Ejemplos de proyectos destacados con tecnologías modernas
-- **Habilidades Técnicas**: Stack tecnológico completo (Frontend, Backend, DevOps)
-- **Experiencia Profesional**: Timeline de mi carrera profesional
-- **Información de Contacto**: Formas de conectar conmigo
-
-## Tecnologías Utilizadas
-
-- **HTML5**: Estructura semántica y accesible
-- **CSS3**: Diseño responsivo con Flexbox y Grid
-- **JavaScript**: Interactividad y animaciones suaves
-- **Font Awesome**: Iconografía profesional
-- **Google Fonts**: Tipografía moderna (Inter)
-
-## Características
-
-✨ **Diseño Responsivo**: Optimizado para todos los dispositivos
-🎨 **Animaciones Suaves**: Transiciones y efectos visuales elegantes
-⚡ **Rendimiento Optimizado**: Carga rápida y navegación fluida
-🎯 **SEO Friendly**: Optimizado para motores de búsqueda
-📱 **Mobile First**: Diseño que prioriza la experiencia móvil
-
-## Estructura del Proyecto
-
-```
-/
-├── index.html          # Página principal
-├── styles.css          # Estilos CSS
-├── script.js           # Funcionalidad JavaScript
-└── README.md           # Este archivo
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-## Secciones del Sitio
+Abre http://127.0.0.1:4173 en el navegador. También puedes servir estos archivos con cualquier servidor estático.
 
-1. **Hero Section**: Presentación principal con llamada a la acción
-2. **Sobre Mí**: Información personal y estadísticas profesionales
-3. **Proyectos**: Portfolio de trabajos destacados
-4. **Tecnologías**: Habilidades técnicas organizadas por categorías
-5. **Experiencia**: Timeline de carrera profesional
-6. **Contacto**: Formulario y información de contacto
+## Interacciones
 
-## Deploy en GitHub Pages
+- Proceso de desarrollo estático en cinco pasos: idea, prototipo, desarrollo, pruebas y liberación.
+- Filtros de proyectos por IA, gobierno digital y plataformas web.
+- Fichas de proyecto con descripción, impacto, tecnologías y enlace original.
+- Buscador de proyectos, tecnologías, servicios y secciones: **Ctrl/⌘ K**, flechas, Enter y Escape.
+- Laboratorio con tres simulaciones locales de agentes. Son flujos ilustrativos deterministas; no se conectan a modelos ni APIs.
+- Trayectoria profesional visible completa desde el inicio, copia de email y formularios de contacto.
+- Respeto de `prefers-reduced-motion` para reducir animaciones según las preferencias del sistema.
 
-Este sitio está configurado para ser desplegado automáticamente en GitHub Pages. Para activarlo:
+## Archivos
 
-1. Ve a la configuración del repositorio
-2. Navega a la sección "Pages"
-3. Selecciona "Deploy from a branch"
-4. Elige "main" como rama fuente
-5. El sitio estará disponible en: `https://alejandrov.github.io/alejandrov/`
+- `index.html`: contenido, estructura semántica y formulario.
+- `styles.css`: diseño responsive, componentes y estados accesibles.
+- `script.js`: interacciones y datos de las fichas de proyecto.
+- `assets/`: fotografías, capturas originales de proyectos e icono del sitio.
 
-## Personalización
+Las tarjetas se mantienen en el HTML para que el contenido y los enlaces sigan disponibles sin JavaScript. Al editar proyectos, actualiza tanto las tarjetas en `index.html` como sus fichas en el arreglo `projects` de `script.js`.
 
-Para personalizar este sitio web:
+El formulario conserva su destino original de Formspree y admite envío nativo sin JavaScript. Con JavaScript ofrece estados de carga, éxito y error; conserva el mensaje cuando falla. Las fuentes Space Grotesk y Space Mono se obtienen de Google Fonts y disponen de fuentes de respaldo.
 
-1. **Información Personal**: Actualiza los datos en `index.html`
-2. **Proyectos**: Modifica la sección de proyectos con tus trabajos reales
-3. **Estilos**: Ajusta colores y diseño en `styles.css`
-4. **Funcionalidad**: Añade nuevas características en `script.js`
+## Publicación
+
+Los cambios se preparan y verifican localmente. Un push o despliegue requiere una solicitud explícita del propietario según sus instrucciones.
 
 ## Contacto
 
-📧 **Email**: alejandro.villarroel@email.com
-💻 **GitHub**: [github.com/alejandrov](https://github.com/alejandrov)
-
----
-
-⭐ **¿Te gusta este proyecto?** ¡Dale una estrella al repositorio!
-
-**Desarrollado con ❤️ por Alejandro Villarroel**
+- Email: alejandrovillarroel@gmail.com
+- GitHub: https://github.com/alejandrov
+- Tamaulipas, México
