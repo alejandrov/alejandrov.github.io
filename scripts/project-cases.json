@@ -1,0 +1,56 @@
+{
+  "8": {
+    "problem": "Coordinar clientes, proyectos y tareas sin perder el contexto del trabajo.",
+    "solution": "Un espacio de gestión que reúne clientes, tableros, calendario y recursos.",
+    "steps": [
+      [
+        "Organizar",
+        "Proyecto de ejemplo: rediseño de un sitio. La información del cliente y el trabajo se reúnen en un mismo contexto."
+      ],
+      [
+        "Dar seguimiento",
+        "Tarea de ejemplo: revisar el prototipo. Un tablero permite representar su estado y los pendientes del equipo."
+      ],
+      [
+        "Planificar",
+        "Actividad de ejemplo: revisión del viernes. El calendario complementa la organización del proyecto."
+      ]
+    ]
+  },
+  "6": {
+    "problem": "Atender consultas y coordinar citas dentro de las conversaciones de WhatsApp.",
+    "solution": "Un agente conversacional para atención, agenda de citas y seguimiento de servicios.",
+    "steps": [
+      [
+        "Recibir una consulta",
+        "Mensaje ficticio: «¿Tienen un horario disponible para una consulta?»"
+      ],
+      [
+        "Proponer opciones",
+        "Respuesta ilustrativa: «En este ejemplo, hay horarios a las 10:00 y a las 16:30. ¿Cuál prefieres?»"
+      ],
+      [
+        "Confirmar con la persona",
+        "Mensaje ficticio: «Prefiero las 16:30». Este recorrido no reserva citas ni envía mensajes."
+      ]
+    ]
+  },
+  "2": {
+    "problem": "Hacer accesibles los trámites y organizar su gestión en línea.",
+    "solution": "Una plataforma para crear y gestionar trámites gubernamentales desde un portal digital.",
+    "steps": [
+      [
+        "Encontrar el trámite",
+        "Trámite ficticio: solicitud de un permiso. La persona consulta el catálogo del portal."
+      ],
+      [
+        "Revisar la solicitud",
+        "Ejemplo conceptual: consultar requisitos y preparar los datos solicitados. No son requisitos oficiales."
+      ],
+      [
+        "Gestionar el proceso",
+        "Ejemplo conceptual: presentar la solicitud para revisión. Aquí no se registra ni se envía ningún trámite."
+      ]
+    ]
+  }
+}

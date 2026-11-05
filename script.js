@@ -4,7 +4,7 @@ const projects = [
     {
         "title": "Aqua Vivant",
         "description": "Plataforma inmobiliaria para explorar propiedades, gestionar solicitudes de contacto y centralizar la experiencia comercial con automatización, CRM y asistencia basada en IA.",
-        "impact": "Impacto: acelera la captación de leads y ordena el seguimiento comercial.",
+        "impact": "Enfoque: Plataforma inmobiliaria para explorar propiedades, gestionar solicitudes de contacto y centralizar la experiencia comercial con automatización, CRM y asistencia basada en IA.",
         "image": "assets/aqua-vivant-card.jpg",
         "url": "https://ia.aquavivant.com/",
         "tech": [
@@ -12,12 +12,13 @@ const projects = [
             "Material UI",
             "CRM",
             "IA"
-        ]
+        ],
+        "slug": "aqua-vivant"
     },
     {
         "title": "Palante Ganado",
         "description": "Plataforma integral para la administración digital de ganado en ranchos. Permite el seguimiento en tiempo real del inventario, registro de movimientos y generación de reportes detallados para optimizar la gestión ganadera.",
-        "impact": "Impacto: convierte inventario, movimientos y reportes en una operación trazable.",
+        "impact": "Enfoque: Plataforma integral para la administración digital de ganado en ranchos. Permite el seguimiento en tiempo real del inventario, registro de movimientos y generación de reportes detallados para optimizar la gestión ganadera.",
         "image": "assets/palanteganado-card.jpg",
         "url": "https://palanteganado.com/",
         "tech": [
@@ -25,24 +26,28 @@ const projects = [
             "Node.js",
             "MongoDB",
             "Stripe"
-        ]
+        ],
+        "slug": "palante-ganado"
     },
     {
         "title": "Ventanilla Digital",
         "description": "Plataforma innovadora para la creación y gestión de trámites gubernamentales en línea. Facilita el acceso a servicios públicos, reduce tiempos de espera y mejora la eficiencia en procesos administrativos.",
-        "impact": "Impacto: reduce fricción ciudadana y digitaliza procesos de atención pública.",
+        "impact": "Enfoque: Una plataforma para crear y gestionar trámites gubernamentales desde un portal digital.",
         "image": "assets/ventanilla-card.jpg",
         "url": "http://cancun-digital.mx/",
         "tech": [
             "Vue.js",
             "Express",
             "PostgreSQL"
-        ]
+        ],
+        "slug": "ventanilla-digital",
+        "problem": "Hacer accesibles los trámites y organizar su gestión en línea.",
+        "solution": "Una plataforma para crear y gestionar trámites gubernamentales desde un portal digital."
     },
     {
         "title": "Ventanilla Digital Monterrey",
         "description": "Nueva versión de la plataforma para gestión digital de trámites municipales, con automatización, seguimiento de solicitudes y herramientas de atención ciudadana impulsadas por IA.",
-        "impact": "Impacto: moderniza trámites municipales con asistencia inteligente y autoservicio.",
+        "impact": "Enfoque: Nueva versión de la plataforma para gestión digital de trámites municipales, con automatización, seguimiento de solicitudes y herramientas de atención ciudadana impulsadas por IA.",
         "image": "assets/ventanilla-monterrey-card.jpg",
         "url": "https://ventanilladigital.monterrey.gob.mx/",
         "tech": [
@@ -50,12 +55,13 @@ const projects = [
             "IA",
             "Gobierno Digital",
             "Automatización"
-        ]
+        ],
+        "slug": "ventanilla-digital-monterrey"
     },
     {
         "title": "Sistema MatIAs",
         "description": "Bot inteligente para WhatsApp con integración de Gemini para respuestas automáticas, procesamiento de lenguaje natural y automatización de procesos de negocio.",
-        "impact": "Impacto: atiende conversaciones frecuentes sin depender siempre de un operador.",
+        "impact": "Enfoque: Bot inteligente para WhatsApp con integración de Gemini para respuestas automáticas, procesamiento de lenguaje natural y automatización de procesos de negocio.",
         "image": "assets/matias-card.jpg",
         "url": "http://matias.gobierno-digital.mx/",
         "tech": [
@@ -64,12 +70,13 @@ const projects = [
             "WhatsApp API",
             "Socket.io",
             "MongoDB"
-        ]
+        ],
+        "slug": "sistema-matias"
     },
     {
         "title": "Garner System 3.0",
         "description": "Nueva versión del sistema para planificación, priorización y entrega de resultados con IA. Integra seguimiento operativo, tableros de control y flujos de trabajo para gobiernos municipales.",
-        "impact": "Impacto: da visibilidad ejecutiva a prioridades, avances y operación diaria.",
+        "impact": "Enfoque: Nueva versión del sistema para planificación, priorización y entrega de resultados con IA. Integra seguimiento operativo, tableros de control y flujos de trabajo para gobiernos municipales.",
         "image": "assets/garner-ia-card.jpg",
         "url": "https://monterrey.garner-ia.com/",
         "tech": [
@@ -77,12 +84,13 @@ const projects = [
             "IA",
             "Dashboards",
             "Gobierno Digital"
-        ]
+        ],
+        "slug": "garner-system"
     },
     {
         "title": "Agentecitas",
         "description": "Agente conversacional para WhatsApp que automatiza la atención, agenda citas, gestiona servicios y centraliza el seguimiento operativo de negocios con asistencia inteligente.",
-        "impact": "Impacto: agenda y responde clientes 24/7 sin saturar al equipo humano.",
+        "impact": "Enfoque: Un agente conversacional para atención, agenda de citas y seguimiento de servicios.",
         "image": "assets/agentecitas-card.jpg",
         "url": "https://agentecitas.up.railway.app/",
         "tech": [
@@ -90,12 +98,15 @@ const projects = [
             "WhatsApp",
             "IA",
             "CRM"
-        ]
+        ],
+        "slug": "agentecitas",
+        "problem": "Atender consultas y coordinar citas dentro de las conversaciones de WhatsApp.",
+        "solution": "Un agente conversacional para atención, agenda de citas y seguimiento de servicios."
     },
     {
         "title": "Aguacatin",
         "description": "Plataforma innovadora para conectar distribuidores de pañales, permitiendo comparar precios y ofertas en tiempo real. Facilita la distribución eficiente y el acceso a mejores oportunidades de negocio.",
-        "impact": "Impacto: facilita comparación de ofertas y mejora decisiones de compra.",
+        "impact": "Enfoque: Plataforma innovadora para conectar distribuidores de pañales, permitiendo comparar precios y ofertas en tiempo real. Facilita la distribución eficiente y el acceso a mejores oportunidades de negocio.",
         "image": "assets/aguacatin-card.jpg",
         "url": "https://aguacatin.com/",
         "tech": [
@@ -103,12 +114,13 @@ const projects = [
             "Node.js",
             "MongoDB",
             "Express"
-        ]
+        ],
+        "slug": "aguacatin"
     },
     {
         "title": "SMARThub",
         "description": "Plataforma de gestión interna que centraliza clientes, proyectos, tableros de trabajo, calendario y recursos para coordinar equipos y dar seguimiento a la operación diaria.",
-        "impact": "Impacto: reúne el trabajo y la información del equipo en un solo espacio.",
+        "impact": "Enfoque: Un espacio de gestión que reúne clientes, tableros, calendario y recursos.",
         "image": "assets/smarthub-card.jpg",
         "url": "https://scshub.up.railway.app/",
         "tech": [
@@ -116,7 +128,10 @@ const projects = [
             "Node.js",
             "Express",
             "MongoDB"
-        ]
+        ],
+        "slug": "smarthub",
+        "problem": "Coordinar clientes, proyectos y tareas sin perder el contexto del trabajo.",
+        "solution": "Un espacio de gestión que reúne clientes, tableros, calendario y recursos."
     }
 ];
 (() => {
@@ -187,7 +202,7 @@ const projects = [
     function openProject(index) {
         const project = projects[index];
         if (!project) return;
-        $('#project-dialog-body').innerHTML = `<img src="${project.image}" alt="Vista de ${escapeHTML(project.title)}" width="900" height="500"><div class="dialog-content"><h2 id="project-dialog-title">${escapeHTML(project.title)}</h2><p>${escapeHTML(project.description)}</p><p class="dialog-impact">${escapeHTML(project.impact)}</p><div class="project-tech">${project.tech.map(tech => `<span>${escapeHTML(tech)}</span>`).join('')}</div><a class="btn btn-primary" href="${project.url}" target="_blank" rel="noopener noreferrer">Explorar el sitio</a></div>`;
+        $('#project-dialog-body').innerHTML = `<img src="${project.image}" alt="Vista de ${escapeHTML(project.title)}" width="900" height="500"><div class="dialog-content"><h2 id="project-dialog-title">${escapeHTML(project.title)}</h2><p>${escapeHTML(project.description)}</p>${project.problem ? `<div class="case-summary"><h3>El problema</h3><p>${escapeHTML(project.problem)}</p><h3>La solución</h3><p>${escapeHTML(project.solution)}</p></div>` : ""}<div class="project-tech">${project.tech.map(tech => `<span>${escapeHTML(tech)}</span>`).join('')}</div><a class="text-link project-detail-link" href="proyectos/${project.slug}/">Ver caso y enlace para compartir ↗</a><a class="btn btn-primary" href="${project.url}" target="_blank" rel="noopener noreferrer">Explorar el sitio</a></div>`;
         projectDialog.showModal();
     }
     $$('[data-open-project]').forEach(button => button.addEventListener('click', () => openProject(Number(button.dataset.openProject))));

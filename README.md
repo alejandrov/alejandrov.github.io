@@ -42,3 +42,11 @@ Los cambios se preparan y verifican localmente. Un push o despliegue requiere un
 - Email: alejandrovillarroel@gmail.com
 - GitHub: https://github.com/alejandrov
 - Tamaulipas, México
+
+## Casos y enlaces compartibles
+
+- El inicio destaca SMARThub, Agentecitas y Ventanilla Digital con problema y solución.
+- Cada proyecto tiene una ruta estática `proyectos/<slug>/` con canonical, Open Graph y Twitter Card, legibles sin JavaScript.
+- Los tres casos destacados incluyen demostraciones visuales representativas de 18 segundos con datos ficticios: proyecto/tablero/calendario, conversación/citas y portal/solicitud/seguimiento. No son grabaciones reales ni reproducen la interfaz exacta del producto. Incluyen pausa, continuar, reiniciar, navegación por pasos y alternativa legible sin JavaScript. Las transiciones respetan movimiento reducido.
+- Tras editar `projects` en `script.js` o `scripts/project-cases.json` o las escenas de `scripts/demos/`, ejecutar `python3 scripts/build-project-pages.py` y revisar las páginas generadas.
+- Las URL canónicas apuntan al dominio público; las nuevas rutas estarán disponibles allí solo después de publicar con autorización.
