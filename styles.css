@@ -782,7 +782,7 @@ h2 {
 
 .projects-grid {
     display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns:repeat(3,minmax(0,1fr));
     gap:38px 27px
 }
 
@@ -1567,6 +1567,7 @@ dialog::backdrop {
 
 .project-dialog img {
     width:100%;
+    height:auto;
     aspect-ratio:1.85;
     object-fit:cover
 }
@@ -1724,6 +1725,9 @@ dialog::backdrop {
 @media(max-width:1150px) {
     .container {
         width:calc(100% - 72px)
+    }
+    .projects-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr))
     }
     .nav-menu {
         gap:23px

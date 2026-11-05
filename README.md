@@ -1,6 +1,6 @@
 # Alejandro Villarroel — Portfolio Nexus
 
-Portafolio de Alejandro Villarroel: desarrollo full-stack, liderazgo técnico e inteligencia artificial. Diseño inspirado en interfaces de videojuegos y sistemas futuristas, conservando los ocho proyectos, servicios, tecnologías, experiencia y datos de contacto del sitio original.
+Portafolio de Alejandro Villarroel: desarrollo full-stack, liderazgo técnico e inteligencia artificial. Diseño inspirado en interfaces de videojuegos y sistemas futuristas, con nueve proyectos destacados, servicios, tecnologías, experiencia y datos de contacto. La cuadrícula muestra tres proyectos por fila en escritorio, dos en tablet y uno en móvil.
 
 ## Ejecutar localmente
 

@@ -1,5 +1,5 @@
 'use strict';
-// Project content preserved from the original portfolio.
+// Project content shared by the detail dialog and search.
 const projects = [
     {
         "title": "Aqua Vivant",
@@ -104,6 +104,19 @@ const projects = [
             "MongoDB",
             "Express"
         ]
+    },
+    {
+        "title": "SMARThub",
+        "description": "Plataforma de gestión interna que centraliza clientes, proyectos, tableros de trabajo, calendario y recursos para coordinar equipos y dar seguimiento a la operación diaria.",
+        "impact": "Impacto: reúne el trabajo y la información del equipo en un solo espacio.",
+        "image": "assets/smarthub-card.jpg",
+        "url": "https://scshub.up.railway.app/",
+        "tech": [
+            "React",
+            "Node.js",
+            "Express",
+            "MongoDB"
+        ]
     }
 ];
 (() => {
@@ -164,7 +177,7 @@ const projects = [
             card.hidden = filter !== 'all' && !card.dataset.category.split(' ').includes(filter);
             if (!card.hidden) count++;
         });
-        $('.project-count').textContent = `MOSTRANDO ${String(count).padStart(2, '0')} / 08`;
+        $('.project-count').textContent = `MOSTRANDO ${String(count).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
         updateScroll();
     }));
 
